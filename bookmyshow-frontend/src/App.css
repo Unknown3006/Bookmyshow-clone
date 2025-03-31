@@ -1,0 +1,255 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+}
+
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-header {
+  background-color: #e91e63;
+  color: white;
+  padding: 1rem 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Loading and Error states */
+.loading-container,
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 300px;
+  width: 100%;
+}
+
+.loading {
+  font-size: 1.2rem;
+  color: #666;
+}
+
+.error {
+  background: #fff3f3;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.error h3 {
+  color: #e74c3c;
+  margin-bottom: 10px;
+}
+
+.retry-btn {
+  margin-top: 15px;
+  padding: 8px 20px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.retry-btn:hover {
+  background-color: #c0392b;
+}
+
+/* Movie Grid */
+.movie-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.movie-card {
+  background: white;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+  transform: translateY(-5px);
+}
+
+.movie-poster {
+  position: relative;
+  padding-top: 150%;
+}
+
+.movie-poster img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h3 {
+  margin: 0 0 10px;
+  font-size: 1.1rem;
+  color: #2c3e50;
+}
+
+.movie-genre {
+  color: #7f8c8d;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
+}
+
+/* Theater Grid */
+.theater-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.theater-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.theater-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Buttons */
+.book-now-btn,
+.view-shows-btn {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+}
+
+.book-now-btn {
+  background-color: #f84464;
+  color: white;
+}
+
+.book-now-btn:hover {
+  background-color: #e23b59;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(248, 68, 100, 0.3);
+}
+
+.view-shows-btn {
+  background-color: #2dc492;
+  color: white;
+}
+
+.view-shows-btn:hover {
+  background-color: #25a77c;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 8px rgba(45, 196, 146, 0.3);
+}
+
+/* Active states for buttons */
+.book-now-btn:active,
+.view-shows-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .movie-grid,
+  .theater-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 15px;
+  }
+
+  .movie-info h3 {
+    font-size: 1rem;
+  }
+
+  .movie-genre {
+    font-size: 0.8rem;
+  }
+
+  .book-now-btn,
+  .view-shows-btn {
+    padding: 8px;
+    font-size: 0.8rem;
+  }
+}
+
+/* Section headings */
+section h2 {
+  padding: 20px;
+  color: #2c3e50;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.booking-page, .theater-page {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.booking-page h2, .theater-page h2 {
+  color: #333;
+  margin-bottom: 20px;
+}
+
+/* Add active state for buttons */
+.book-now-btn:active, .view-shows-btn:active, .back-btn:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Disable styles */
+.book-now-btn:disabled, .view-shows-btn:disabled, .back-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+} 

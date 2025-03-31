@@ -1,0 +1,47 @@
+.link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.card {
+    width: 200px;
+    margin: 8px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.poster {
+    object-fit: cover;
+}
+
+.content {
+    padding: 12px;
+}
+
+.title {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 150px;
+    }
+    
+    .title {
+        font-size: 0.9rem;
+    }
+} 
