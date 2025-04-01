@@ -1,9 +1,9 @@
 .hero {
-  height: 500px;
+  height: 600px;
   background-size: cover;
   background-position: center;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
 }
 
 .hero::before {
@@ -13,7 +13,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.3) 100%);
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.8) 0%,
+    rgba(0,0,0,0.5) 50%,
+    rgba(0,0,0,0.8) 100%
+  );
 }
 
 .hero-content {
@@ -21,37 +26,43 @@
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 3rem;
+  padding: 4rem;
   color: white;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.7);
 }
 
 .hero-content h1 {
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 1rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
 }
 
 .hero-content p {
-  font-size: 1.2rem;
-  max-width: 700px;
-  margin-bottom: 1.5rem;
+  font-size: 1.4rem;
+  max-width: 800px;
+  margin-bottom: 2rem;
+  line-height: 1.6;
 }
 
 .book-now-btn {
-  background-color: #e91e63;
+  background-color: #f84464;
   color: white;
   border: none;
-  padding: 0.8rem 2rem;
-  font-size: 1.1rem;
-  border-radius: 4px;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 30px;
   cursor: pointer;
-  font-weight: bold;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
   transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(248, 68, 100, 0.3);
 }
 
 .book-now-btn:hover {
-  background-color: #c2185b;
-  transform: scale(1.05);
+  background-color: #e23b59;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(248, 68, 100, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -70,4 +81,4 @@
   .hero-content p {
     font-size: 1rem;
   }
-} 
+}

@@ -2,7 +2,7 @@ import axios from 'axios';
 
 // Create API client with the correct backend URL
 const api = axios.create({
-    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8080/api',
+    baseURL: process.env.REACT_APP_API_URL || 'http://localhost:8000/api',
     headers: {
         'Content-Type': 'application/json'
     },
@@ -38,7 +38,8 @@ api.interceptors.response.use(
         if (!error.response) {
             console.error('Network Error: Could not connect to the server');
             return Promise.reject({
-                message: 'Could not connect to the server. Please check your internet connection or try again later.'
+                message: 'Could not connect to the server. Please check your internet connection or try again later.',
+                originalError: error
             });
         }
         

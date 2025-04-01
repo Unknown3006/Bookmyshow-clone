@@ -1,0 +1,298 @@
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.header h1 {
+  color: #333;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.filters {
+  display: flex;
+  gap: 10px;
+}
+
+.filterBtn {
+  padding: 8px 16px;
+  border: 1px solid #ddd;
+  border-radius: 20px;
+  background-color: white;
+  color: #666;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.filterBtn.active {
+  background-color: #f84464;
+  color: white;
+  border-color: #f84464;
+}
+
+.filterBtn:hover:not(.active) {
+  background-color: #f5f5f5;
+}
+
+.bookingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.bookingCard {
+  display: flex;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  position: relative;
+}
+
+.bookingCard.cancelled {
+  opacity: 0.7;
+}
+
+.cancelledBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #f44336;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  z-index: 1;
+}
+
+.cardLeft {
+  padding: 20px;
+  border-right: 1px solid #eee;
+}
+
+.poster {
+  width: 100px;
+  height: 150px;
+  border-radius: 4px;
+  object-fit: cover;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.cardMiddle {
+  flex: 1;
+  padding: 20px;
+}
+
+.cardMiddle h3 {
+  margin: 0 0 10px;
+  color: #333;
+  font-size: 1.5rem;
+}
+
+.theater {
+  color: #555;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.showDetails {
+  color: #f84464;
+  margin-bottom: 15px;
+  font-size: 0.9rem;
+}
+
+.bookingDetails {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 10px 20px;
+}
+
+.detail {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.label {
+  color: #777;
+  font-size: 0.8rem;
+}
+
+.value {
+  color: #333;
+  font-weight: 500;
+}
+
+.cardRight {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-width: 150px;
+  align-items: center;
+}
+
+.cancelBtn, .viewTicketBtn {
+  padding: 10px 20px;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: all 0.2s;
+  width: 100%;
+}
+
+.cancelBtn {
+  background-color: transparent;
+  color: #f44336;
+  border: 1px solid #f44336;
+}
+
+.cancelBtn:hover:not(:disabled) {
+  background-color: #f44336;
+  color: white;
+}
+
+.cancelBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.viewTicketBtn {
+  background-color: #f84464;
+  color: white;
+  border: none;
+  display: block;
+}
+
+.viewTicketBtn:hover {
+  background-color: #e02c4c;
+}
+
+.emptyState {
+  text-align: center;
+  padding: 50px 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.emptyIcon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.emptyState h3 {
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.emptyState p {
+  color: #666;
+  margin-bottom: 25px;
+}
+
+.browseBtn {
+  display: inline-block;
+  background-color: #f84464;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+
+.browseBtn:hover {
+  background-color: #e02c4c;
+}
+
+/* Loading and Error States */
+.loading, .error {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #f84464;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error h3 {
+  color: #f84464;
+  margin-bottom: 10px;
+}
+
+.error button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f84464;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  
+  .bookingCard {
+    flex-direction: column;
+  }
+  
+  .cardLeft {
+    border-right: none;
+    border-bottom: 1px solid #eee;
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+  }
+  
+  .cardRight {
+    flex-direction: row;
+    padding: 15px;
+  }
+  
+  .cancelBtn, .viewTicketBtn {
+    max-width: 150px;
+  }
+  
+  .bookingDetails {
+    grid-template-columns: 1fr;
+  }
+} 

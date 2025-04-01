@@ -20,10 +20,10 @@ export const AuthProvider = ({ children }) => {
 
     const fetchUser = async (token) => {
         try {
-            const response = await axios.get('/api/users/me', {
+            const response = await axios.get('http://localhost:8080/api/auth/me', {
                 headers: { Authorization: `Bearer ${token}` }
             });
-            setUser(response.data);
+            setUser(response.data.data);
         } catch (err) {
             localStorage.removeItem('token');
             setUser(null);
@@ -32,11 +32,19 @@ export const AuthProvider = ({ children }) => {
         }
     };
 
+    const reloadUser = async () => {
+        const token = localStorage.getItem('token');
+        if (token) {
+            setLoading(true);
+            await fetchUser(token);
+        }
+    };
+
     const login = async (email, password) => {
         try {
             setError(null);
-            const response = await axios.post('/api/auth/login', { email, password });
-            const { token, user } = response.data;
+            const response = await axios.post('http://localhost:8080/api/auth/login', { email, password });
+            const { token, user } = response.data.data;
             localStorage.setItem('token', token);
             setUser(user);
             return user;
@@ -49,8 +57,8 @@ export const AuthProvider = ({ children }) => {
     const register = async (userData) => {
         try {
             setError(null);
-            const response = await axios.post('/api/auth/register', userData);
-            const { token, user } = response.data;
+            const response = await axios.post('http://localhost:8080/api/auth/register', userData);
+            const { token, user } = response.data.data;
             localStorage.setItem('token', token);
             setUser(user);
             return user;
@@ -71,7 +79,8 @@ export const AuthProvider = ({ children }) => {
         error,
         login,
         register,
-        logout
+        logout,
+        reloadUser
     };
 
     return (

@@ -1,81 +1,74 @@
 # BookMyShow Clone
 
-A full-stack movie ticket booking application built with React.js and Node.js.
-
-## Features
-
-- Browse movies currently showing in theaters
-- View movie details including cast, ratings, and showtimes
-- Book movie tickets
-- View popular theaters
-- User authentication
-- Responsive design
-
-## Tech Stack
-
-### Frontend
-- React.js
-- React Router for navigation
-- CSS3 for styling
-- Font Awesome for icons
-
-### Backend
-- Node.js
-- Express.js
-- MongoDB for database
-- Mongoose ODM
-- JWT for authentication
+A full-stack movie ticket booking application with React frontend and Node.js backend.
 
 ## Getting Started
 
 ### Prerequisites
+
 - Node.js (v14 or higher)
-- MongoDB
-- npm or yarn
+- MongoDB (running on localhost:27017)
+- Web browser (Chrome/Firefox/Edge recommended)
 
 ### Installation
 
 1. Clone the repository
-```bash
-git clone https://github.com/yourusername/bookmyshow-clone.git
-cd bookmyshow-clone
-```
+2. Make sure MongoDB is running on your system
 
-2. Install backend dependencies
-```bash
-npm install
-```
+### Running the Application
 
-3. Install frontend dependencies
-```bash
-cd bookmyshow-frontend
-npm install
-```
+#### Method 1: Using the start script (Windows)
 
-4. Create a .env file in the root directory and add:
-```
-PORT=8000
-NODE_ENV=development
-MONGO_URI=mongodb://localhost:27017/bookmyshow
-JWT_SECRET=your_jwt_secret
-JWT_EXPIRE=30d
-```
+1. Simply double-click the `start.bat` file in the root directory
+2. This will:
+   - Set up environment variables
+   - Start the backend server on port 8000
 
-5. Start MongoDB service
+3. In a separate terminal, start the frontend:
+   ```
+   cd bookmyshow-frontend
+   npm start
+   ```
 
-6. Run the application
-```bash
-# Start backend server (from root directory)
-npm start
+#### Method 2: Manual startup
 
-# Start frontend server (from bookmyshow-frontend directory)
-cd bookmyshow-frontend
-npm start
-```
+1. Start the backend server:
+   ```
+   node server.js
+   ```
 
-The application will be available at:
+2. In a separate terminal, start the frontend:
+   ```
+   cd bookmyshow-frontend
+   npm start
+   ```
+
+### Accessing the Application
+
 - Frontend: http://localhost:3000
-- Backend API: http://localhost:8000
+- Backend API: http://localhost:8000/api
+
+## Features
+
+- Browse now showing and upcoming movies
+- View movie details and showtimes
+- Select seats and book tickets
+- User authentication (login/register)
+- View booking history
+
+## Technologies Used
+
+- Frontend: React.js, React Router, CSS Modules
+- Backend: Node.js, Express.js
+- Database: MongoDB
+
+## Troubleshooting
+
+If you encounter any issues:
+
+1. Make sure MongoDB is running
+2. Ensure ports 8000 and 3000 are not being used by other applications
+3. Check console logs for specific error messages
 
 ## API Endpoints
 

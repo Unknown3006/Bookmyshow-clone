@@ -1,0 +1,372 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Banner Section */
+.banner {
+  height: 400px;
+  border-radius: 8px;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding: 40px;
+  color: white;
+}
+
+.theaterInfo {
+  max-width: 700px;
+}
+
+.theaterInfo h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.location {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin-bottom: 15px;
+}
+
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.ratingValue {
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 10px;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.reviews {
+  font-size: 0.9rem;
+  opacity: 0.7;
+}
+
+.address {
+  margin-bottom: 20px;
+  opacity: 0.8;
+}
+
+.facilities {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.facility {
+  background-color: rgba(255, 255, 255, 0.15);
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+}
+
+/* Date Selector */
+.dateSelector {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding-bottom: 15px;
+  margin-bottom: 30px;
+}
+
+.dateButton {
+  min-width: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.dateButton.active {
+  border-color: #f84464;
+  background-color: rgba(248, 68, 100, 0.1);
+}
+
+.dateButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.day {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.date {
+  position: relative;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.today {
+  display: block;
+  font-size: 0.7rem;
+  color: white;
+  background-color: #f84464;
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+/* Movies Section */
+.moviesSection {
+  margin-bottom: 40px;
+}
+
+.moviesSection h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.moviesList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.movieItem {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.movieDetails {
+  display: flex;
+  padding: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.poster {
+  width: 80px;
+  height: 120px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin-right: 20px;
+}
+
+.movieInfo h3 {
+  font-size: 1.3rem;
+  margin: 0 0 10px;
+  color: #333;
+}
+
+.tags {
+  display: flex;
+  gap: 10px;
+}
+
+.certification,
+.language,
+.format {
+  display: inline-block;
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+.certification {
+  background-color: #f0f0f0;
+  color: #666;
+}
+
+.language {
+  background-color: #e8f4f8;
+  color: #0277bd;
+}
+
+.format {
+  background-color: #e8f5e9;
+  color: #388e3c;
+}
+
+.showTimes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  padding: 20px;
+}
+
+.showTime {
+  display: block;
+  min-width: 90px;
+  padding: 8px 5px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.showTime:hover {
+  border-color: #f84464;
+  transform: translateY(-2px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.time {
+  font-weight: 600;
+  color: #f84464;
+  font-size: 0.95rem;
+}
+
+.screen {
+  font-size: 0.75rem;
+  color: #777;
+}
+
+.noShows {
+  padding: 30px;
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #666;
+}
+
+/* Info Section */
+.infoSection h2 {
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 1.8rem;
+}
+
+.infoGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.infoCard {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.infoCard h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 10px;
+}
+
+.infoCard p {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+.infoCard ul {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.infoCard li {
+  margin-bottom: 8px;
+  color: #555;
+}
+
+/* Loading and Error States */
+.loading, .error {
+  min-height: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #f84464;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error h3 {
+  color: #f84464;
+  margin-bottom: 10px;
+}
+
+.error button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f84464;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .banner {
+    height: auto;
+    padding: 30px 20px;
+  }
+  
+  .theaterInfo h1 {
+    font-size: 1.8rem;
+  }
+  
+  .location {
+    font-size: 1rem;
+  }
+  
+  .dateSelector {
+    padding-bottom: 10px;
+  }
+  
+  .dateButton {
+    min-width: 70px;
+  }
+  
+  .movieDetails {
+    padding: 15px;
+  }
+  
+  .poster {
+    width: 60px;
+    height: 90px;
+    margin-right: 15px;
+  }
+  
+  .movieInfo h3 {
+    font-size: 1.1rem;
+  }
+  
+  .showTimes {
+    padding: 15px;
+    gap: 10px;
+  }
+  
+  .showTime {
+    min-width: 80px;
+    padding: 6px 3px;
+  }
+} 

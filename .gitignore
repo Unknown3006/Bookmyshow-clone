@@ -42,4 +42,12 @@ yarn-error.log*
 *.tgz
 
 # Yarn Integrity file
-.yarn-integrity 
+.yarn-integrity
+
+# Project specific
+bookmyshow-frontend/node_modules/
+bookmyshow-frontend/build/
+bookmyshow-frontend/.env
+*.bat
+!start-app.bat
+!install.bat 

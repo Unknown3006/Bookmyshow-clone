@@ -1,0 +1,230 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #222539;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.movieInfo h1 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+.details {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.theaterInfo h2 {
+  font-size: 1.2rem;
+  margin-bottom: 5px;
+}
+
+.theaterInfo p {
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.showTime {
+  margin-top: 10px;
+  font-weight: 600;
+  color: #f84464;
+}
+
+.dateSelector {
+  display: flex;
+  gap: 15px;
+  overflow-x: auto;
+  padding: 10px 0;
+  margin-bottom: 30px;
+}
+
+.dateButton {
+  min-width: 80px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  background-color: white;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+}
+
+.dateButton.active {
+  border-color: #f84464;
+  background-color: rgba(248, 68, 100, 0.1);
+}
+
+.dateButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.day {
+  font-weight: 600;
+  font-size: 0.9rem;
+  color: #444;
+}
+
+.date {
+  position: relative;
+  font-size: 0.8rem;
+  color: #666;
+}
+
+.today {
+  display: block;
+  font-size: 0.7rem;
+  color: white;
+  background-color: #f84464;
+  padding: 1px 4px;
+  border-radius: 2px;
+  margin-top: 2px;
+}
+
+.actionBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding: 15px 20px;
+  border-radius: 8px;
+  box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+  margin-top: 30px;
+  position: sticky;
+  bottom: 20px;
+}
+
+.summary {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.seatsSelected {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.count {
+  font-weight: 600;
+  color: #111;
+}
+
+.seatsList {
+  color: #f84464;
+  font-weight: 500;
+}
+
+.amount {
+  font-size: 1.1rem;
+  color: #333;
+}
+
+.amount span {
+  font-weight: 600;
+  color: #f84464;
+}
+
+.proceedButton {
+  padding: 12px 30px;
+  border: none;
+  border-radius: 6px;
+  background-color: #f84464;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.proceedButton:hover:not(:disabled) {
+  background-color: #e02c4c;
+}
+
+.proceedButton:disabled {
+  background-color: #cccccc;
+  cursor: not-allowed;
+}
+
+/* Loading and Error States */
+.loading, .error {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  text-align: center;
+}
+
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid #f84464;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.error h3 {
+  color: #f84464;
+  margin-bottom: 10px;
+}
+
+.error button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  background-color: #f84464;
+  color: white;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+  }
+
+  .header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .movieInfo h1 {
+    font-size: 1.5rem;
+  }
+
+  .actionBar {
+    flex-direction: column;
+    gap: 15px;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border-radius: 0;
+    z-index: 10;
+  }
+
+  .proceedButton {
+    width: 100%;
+  }
+} 

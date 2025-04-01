@@ -59,8 +59,8 @@ mongoose.connect('mongodb://localhost:27017/bookmyshow', {
 .then(() => console.log('MongoDB Connected'))
 .catch(err => console.log('MongoDB connection error:', err));
 
-// Define port - use 8000 consistently
-const PORT = process.env.PORT || 8000;
+// Define port - use 8080 consistently
+const PORT = process.env.PORT || 8080;
 
 // Start server
 const server = app.listen(PORT, () => {

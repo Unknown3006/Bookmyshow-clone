@@ -1,0 +1,175 @@
+.seatSelector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.screen {
+  width: 80%;
+  height: 10px;
+  background: linear-gradient(to bottom, #f0f0f0, #d0d0d0);
+  border-top-left-radius: 100%;
+  border-top-right-radius: 100%;
+  margin-bottom: 50px;
+  position: relative;
+  box-shadow: 0 -5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.screenText {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #777;
+  font-weight: 500;
+}
+
+.seatLegend {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: #555;
+}
+
+.seatMap {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 100%;
+  overflow-x: auto;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.rowLabel {
+  font-weight: bold;
+  color: #444;
+  width: 20px;
+  text-align: center;
+}
+
+.seats {
+  display: flex;
+  gap: 5px;
+}
+
+.seat {
+  width: 30px;
+  height: 25px;
+  border-radius: 5px 5px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  font-size: 10px;
+  color: #777;
+  background-color: #e0e0e0;
+  transition: all 0.2s ease;
+}
+
+.gap {
+  width: 30px;
+}
+
+.available {
+  background-color: #e0e0e0;
+}
+
+.premium.available {
+  background-color: #b4d2ff;
+}
+
+.standard.available {
+  background-color: #e0e0e0;
+}
+
+.booked {
+  background-color: #d0d0d0;
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+.selected {
+  background-color: #3cb371 !important;
+  color: white;
+}
+
+.seat:hover:not(.booked) {
+  transform: scale(1.1);
+  background-color: #3cb371;
+  color: white;
+}
+
+.seatNumber {
+  font-size: 10px;
+  font-weight: 500;
+}
+
+.seatSummary {
+  display: flex;
+  gap: 30px;
+  margin-top: 40px;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  width: 100%;
+  justify-content: center;
+}
+
+.summaryItem {
+  font-size: 16px;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .seatSelector {
+    padding: 10px;
+  }
+
+  .screen {
+    width: 95%;
+  }
+
+  .seatLegend {
+    font-size: 12px;
+    gap: 10px;
+  }
+
+  .seat {
+    width: 25px;
+    height: 20px;
+    font-size: 9px;
+  }
+
+  .gap {
+    width: 25px;
+  }
+
+  .seatSummary {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+} 
